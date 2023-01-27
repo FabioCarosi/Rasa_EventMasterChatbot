@@ -1,0 +1,79 @@
+version: "3.1"
+
+stories:
+  - story: happy path
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: mood_great
+      - action: utter_happy
+
+  - story: sad path 1
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: mood_unhappy
+      - action: utter_cheer_up
+      - action: utter_did_that_help
+      - intent: affirm
+      - action: utter_happy
+
+  - story: sad path 2
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: mood_unhappy
+      - action: utter_cheer_up
+      - action: utter_did_that_help
+      - intent: deny
+      - action: utter_goodbye
+
+  - story: events by city
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: search_city
+      - action: action_search
+
+  - story: events by artist
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: search_artist
+      - action: action_search
+
+  - story: events by country
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: search_country
+      - action: action_search
+
+  - story: events by city and artist
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: search_city_artist
+      - action: action_search
+
+  - story: rapid search
+    steps:
+      - intent: search_city_artist
+      - action: action_search
+
+  - story: events by segment
+    steps:
+      - intent: search_segment
+      - action: action_search
+
+  - story: events by date
+    steps:
+      - intent: search_date
+      - action: action_search
+
+  - story: get event details
+    steps:
+      - intent: search_city
+      - action: action_search
+      - intent: get_event_details
+      - action: action_detail

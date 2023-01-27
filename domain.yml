@@ -1,0 +1,59 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - search_city
+  - search_artist
+  - search_country
+  - search_city_artist
+  - search_segment
+  - search_date
+  - search_segment_city
+  - search_segment_country
+  - get_event_details
+
+entities:
+  - city
+  - date
+  - artist
+  - country
+  - segment
+  - event_id
+
+regex_features:
+  - name: event_id
+    pattern: ^[a-zA-Z0-9]{8,}$
+
+actions:
+  - action_search
+  - action_detail
+
+responses:
+  utter_greet:
+    - text: "Hey! How can I help you?"
+
+  utter_cheer_up:
+    - text: "Here is something to cheer you up:"
+      image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+    - text: "Did that help you?"
+
+  utter_happy:
+    - text: "Great, carry on!"
+
+  utter_goodbye:
+    - text: "Bye"
+
+  utter_iamabot:
+    - text: "I am a bot, powered by Rasa and I was created for a university project. \n You can search for events sold on the TicketMaster platform. You can search by filtering by category (Sports, Arts, Theatre, Music, and Miscellanous), by city, by country, and by date. You can also request more information about a specific event by entering its id code. "
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

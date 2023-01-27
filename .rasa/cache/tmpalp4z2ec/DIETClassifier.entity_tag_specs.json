@@ -1,0 +1,52 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-artist",
+      "2": "I-artist",
+      "3": "L-artist",
+      "4": "U-artist",
+      "5": "B-category",
+      "6": "I-category",
+      "7": "L-category",
+      "8": "U-category",
+      "9": "B-city",
+      "10": "I-city",
+      "11": "L-city",
+      "12": "U-city",
+      "13": "B-date",
+      "14": "I-date",
+      "15": "L-date",
+      "16": "U-date",
+      "17": "B-team",
+      "18": "I-team",
+      "19": "L-team",
+      "20": "U-team",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-artist": 1,
+      "I-artist": 2,
+      "L-artist": 3,
+      "U-artist": 4,
+      "B-category": 5,
+      "I-category": 6,
+      "L-category": 7,
+      "U-category": 8,
+      "B-city": 9,
+      "I-city": 10,
+      "L-city": 11,
+      "U-city": 12,
+      "B-date": 13,
+      "I-date": 14,
+      "L-date": 15,
+      "U-date": 16,
+      "B-team": 17,
+      "I-team": 18,
+      "L-team": 19,
+      "U-team": 20,
+      "O": 0
+    },
+    "num_tags": 21
+  }
+]

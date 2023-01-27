@@ -1,0 +1,256 @@
+version: "3.1"
+
+nlu:
+  - lookup: artist
+    examples: |
+      - Ed Sheeran
+      - Beyoncé
+      - Taylor Swift
+      - Bruno Mars
+      - Adele
+      - Lady Gaga
+      - Justin Bieber
+      - Drake
+      - Madonna
+      - The Weeknd
+      - Kendrick Lamar
+      - Coldplay
+      - U2
+      - Pink Floyd
+      - Muse
+      - The Rolling Stones
+      - Maroon 5
+      - Fleetwood Mac
+      - Green Day
+      - AC/DC
+      - Metallica
+      - Linkin Park
+      - Red Hot Chili Peppers
+      - Radiohead
+      - The Eagles
+      - Paul McCartney
+      - Elton John
+      - Bruce Springsteen
+      - Sting
+      - Bob Dylan
+      - Willie Nelson
+      - Eros Ramazzotti
+      - Tiziano Ferro
+      - Laura Pausini
+      - J-Ax
+      - Marco Mengoni
+      - Negramaro
+      - Ultimo
+      - Elisa
+      - Fabri Fibra
+      - Giusy Ferreri
+      - Carmen Consoli
+      - Pinguini Tattici Nucleari
+      - Jovanotti
+      - Blanco
+      - Mahmood
+      - Tha Supreme
+      - Liberato
+      - Fedez
+      - Maneskin
+      - Shiva
+      - Depache Mode
+      - Ligabue
+      - Negrita
+      - Irene Grandi
+      - Subsonica
+      - Negrita
+      - Max Pezzali
+      - Le Vibrazioni
+      - Negrita
+      - Afterhours
+      - Thegiornalisti
+      - Fast Animals and Slow Kids
+      - Calcutta
+      - Sfera Ebbasta
+      - Tedua
+      - Ghali
+      - Izi
+      - Salmo
+      - Nitro
+      - Rkomi
+      - Rvssian
+      - Lazza
+      - Coez
+      - Noyz Narcos
+      - Gemitaiz
+      - Guè Pequeno
+      - Marracash
+      - Entics
+      - King Red
+      - Ensi
+      - Frenetik&Orang3
+      - Jack The Smoker
+      - Bassi Maestro
+      - En?gma
+      - AC Milan
+      - Inter Milan
+      - Real Madrid
+      - Barcelona
+      - Manchester United
+      - Manchester City
+      - Liverpool
+      - Chelsea
+      - Arsenal
+      - Paris Saint-Germain
+      - Bayern Munich
+      - Borussia Dortmund
+      - Juventus
+      - Schalke 04
+      - Atlético Madrid
+      - Ajax
+      - Olympique Lyonnais
+      - Celtic
+      - Rangers
+      - Feyenoord
+      - PSV Eindhoven
+      - FC Porto
+      - Benfica
+      - Sporting CP
+      - FC Basel
+      - Olympiakos
+      - Galatasaray
+      - Zenit Saint-Petersburg
+      - CSKA Moscow
+      - Shakhtar Donetsk
+      - Anderlecht
+      - Spartak Moscow
+      - Bayer Leverkusen
+      - RB Leipzig
+      - Napoli
+      - Borussia Mönchengladbach
+      - RB Salzburg
+      - Club Brugge
+      - Atalanta
+      - Dinamo Zagreb
+      - Fenerbahçe
+      - FC Krasnodar
+      - FC Midtjylland
+      - RB Salzburg
+      - Olympique Marseille
+      - Sevilla
+      - Eintracht Frankfurt
+      - Villarreal
+      - Fiorentina
+      - Torino
+      - Sassuolo
+      - Parma
+      - Bologna
+      - Udinese
+      - Genoa
+      - Cagliari
+      - Sampdoria
+      - Benevento
+      - Spezia
+      - Crotone
+      - Hellas Verona
+      - Los Angeles Lakers
+      - Boston Celtics
+      - Golden State Warriors
+      - Chicago Bulls
+      - San Antonio Spurs
+      - Miami Heat
+      - Dallas Mavericks
+      - Houston Rockets
+      - Philadelphia 76ers
+      - Phoenix Suns
+      - New York Knicks
+      - Detroit Pistons
+      - Brooklyn Nets
+      - Denver Nuggets
+      - Utah Jazz
+      - Toronto Raptors
+      - Atlanta Hawks
+      - Sacramento Kings
+      - Indiana Pacers
+      - Orlando Magic
+      - Milwaukee Bucks
+      - Washington Wizards
+      - Cleveland Cavaliers
+      - Minnesota Timberwolves
+      - Oklahoma City Thunder
+      - Portland Trail Blazers
+      - Charlotte Hornets
+      - Memphis Grizzlies
+      - New Orleans Pelicans
+      - Chicago Cubs
+      - Boston Red Sox
+      - New York Yankees
+      - St. Louis Cardinals
+      - Los Angeles Dodgers
+      - San Francisco Giants
+      - AS Roma
+      - SSC Napoli
+      - Torino FC
+      - Bologna FC
+      - SS Lazio
+      - Milan
+      - Arizona Cardinals
+      - Atlanta Falcons
+      - Baltimore Ravens
+      - Buffalo Bills
+      - Carolina Panthers
+      - Chicago Bears
+      - Cincinnati Bengals
+      - Cleveland Browns
+      - Dallas Cowboys
+      - Denver Broncos
+      - Detroit Lions
+      - Green Bay Packers
+      - Houston Texans
+      - Indianapolis Colts
+      - Jacksonville Jaguars
+      - Kansas City Chiefs
+      - Las Vegas Raiders
+      - Los Angeles Chargers
+      - Los Angeles Rams
+      - Miami Dolphins
+      - Minnesota Vikings
+      - New England Patriots
+      - New Orleans Saints
+      - New York Giants
+      - New York Jets
+      - Philadelphia Eagles
+      - Pittsburgh Steelers
+      - San Francisco 49ers
+      - Seattle Seahawks
+      - Tampa Bay Buccaneers
+      - Tennessee Titans
+      - Washington Football Team
+      - Serie A
+      - NFL
+      - NBA
+      - Premier League
+      - Champions League
+      - Europa League
+      - MLB
+      - NHL
+      - Formula 1
+      - MotoGP
+      - Tour de France
+      - Giro d'Italia
+      - Vuelta a España
+      - Festival di Sanremo
+      - Eurovision Song Contest
+      - Cannes Film Festival
+      - Venice Film Festival
+      - Toronto International Film Festival
+      - Sundance Film Festival
+      - Art Basel
+      - Venice Biennale
+      - Oktoberfest
+      - Super Bowl 
+      - Coppa del Mondo FIFA
+      - Giochi Olimpici
+      - Wimbledon
+      - Australian Open
+      - Roland Garros
+      - US Open
+      - ATP World Tour Finals
+      - Next Gen ATP Finals
+      - Tomorrowland

@@ -1,0 +1,44 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-artist",
+      "2": "I-artist",
+      "3": "L-artist",
+      "4": "U-artist",
+      "5": "B-category",
+      "6": "I-category",
+      "7": "L-category",
+      "8": "U-category",
+      "9": "B-city",
+      "10": "I-city",
+      "11": "L-city",
+      "12": "U-city",
+      "13": "B-country",
+      "14": "I-country",
+      "15": "L-country",
+      "16": "U-country",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-artist": 1,
+      "I-artist": 2,
+      "L-artist": 3,
+      "U-artist": 4,
+      "B-category": 5,
+      "I-category": 6,
+      "L-category": 7,
+      "U-category": 8,
+      "B-city": 9,
+      "I-city": 10,
+      "L-city": 11,
+      "U-city": 12,
+      "B-country": 13,
+      "I-country": 14,
+      "L-country": 15,
+      "U-country": 16,
+      "O": 0
+    },
+    "num_tags": 17
+  }
+]

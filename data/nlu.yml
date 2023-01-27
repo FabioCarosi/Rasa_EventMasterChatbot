@@ -1,0 +1,258 @@
+version: "3.1"
+
+nlu:
+  - lookup: segment_name
+    examples: |
+      - Arts & Theatre
+      - Miscellaneous
+      - Music
+      - Sports
+      - Arts
+      - Theatre
+
+  - synonym: event
+    examples: |
+      - event
+      - spectacle
+      - show
+      - performance
+      - gig
+      - concert
+      - happening
+      - presentation
+      - exhibition
+      - display
+
+  - synonym: match
+    examples: |
+      - match
+      - game
+      - contest
+      - fixture
+      - encounter
+      - competition
+      - showdown
+      - battle
+      - bout
+      - face-off
+
+  ### BASIC INTENTS ###
+  - intent: greet
+    examples: |
+      - hey
+      - hello
+      - hi
+      - hello there
+      - good morning
+      - good evening
+      - moin
+      - hey there
+      - let's go
+      - hey dude
+      - goodmorning
+      - goodevening
+      - good afternoon
+      - sup
+      - yo
+      - wazzup
+      - howdy
+
+  - intent: goodbye
+    examples: |
+      - cu
+      - good by
+      - cee you later
+      - good night
+      - bye
+      - goodbye
+      - have a nice day
+      - see you around
+      - bye bye
+      - see you later
+      - cya
+      - ciao
+      - talk to you later
+
+  - intent: affirm
+    examples: |
+      - yes
+      - yeah
+      - y
+      - yep
+      - indeed
+      - of course
+      - that sounds good
+      - that's right
+      - correct
+      - ok
+      - great
+      - perfect
+
+  - intent: deny
+    examples: |
+      - no
+      - n
+      - never
+      - I don't think so
+      - don't like that
+      - no way
+      - not really
+      - nope
+      - not true
+      - no thanks
+      - nah
+
+  - intent: bot_challenge
+    examples: |
+      - are you a bot?
+      - are you a human?
+      - am I talking to a bot?
+      - am I talking to a human?
+      - help
+      - what can you do?
+      - I need help
+      - what are you for?
+
+  ### SEARCH INTENTS ###
+  - intent: search_city
+    examples: |
+      - What's the next event in [San Benedetto del Tronto](city){"entity": "city"}
+      - What events are scheduled in [Ancona](city){"entity": "city"}
+      - What concerts are scheduled in [Rome](city){"entity": "city"}
+      - What shows are scheduled in [Milan](city){"entity": "city"}
+      - What events are happening in [New York](city){"entity": "city"}
+      - What's the next event taking place in [Berlin](city){"entity": "city"}
+      - What are the upcoming events in [Naples](city){"entity": "city"}
+      - What's happening in [Tokyo](city){"entity": "city"} tonight
+      - Are there any events happening in [Grottammare](city){"entity": "city"} this weekend
+      - What are the top events in [Monsampolo del Tronto](city){"entity": "city"}
+      - Can you recommend events in [city](city){"entity": "city"}
+      - Are there any free events in [Palermo](city){"entity": "city"}
+      - I want to find events in [Monteprandone](city){"entity": "city"}
+      - What are the must-see events in [Rome](city){"entity": "city"}
+      - Are there any family-friendly events in [Milan](city){"entity": "city"}
+      - Next events in this city: [Roma](city){"entity": "city"}
+      - Next events in [Ancona](city){"entity": "city"}
+
+  - intent: search_artist
+    examples: |
+      - What concerts are there by [Ed Sheeran](artist){"entity": "artist"}
+      - Where is [Drake](artist){"entity": "artist"} performing
+      - What events are with [Eros Ramazzotti](artist){"entity": "artist"}
+      - When is [Tiziano Ferro](artist){"entity": "artist"} performing
+      - When is [Salmo](artist){"entity": "artist"} next concert
+      - Are there any upcoming concerts for [Nitro](artist){"entity": "artist"}
+      - What are the upcoming events with [En?gma](artist){"entity": "artist"}
+      - Can you tell me the schedule of [Lady Gaga](artist){"entity": "artist"}
+      - I'm looking for [Fabri Fibra](artist){"entity": "artist"} events
+      - How can I find [U2](artist){"entity": "artist"} concert
+      - Are there any [Justin Bieber](artist){"entity": "artist"} events in [Rome](city){"entity": "city"}
+      - I want to buy tickets for a [Coldplay](artist){"entity": "artist"} concert
+      - Can you show me the next performance of [artist](artist){"entity": "artist"}
+      - How can I attend an event of [artist](artist){"entity": "artist"}
+      - What's the next gig of [artist](artist){"entity": "artist"}
+      - How can I see [artist](artist){"entity": "artist"} live
+      - I'm searching for [artist](artist){"entity": "artist"} show dates
+      - Where can I find [artist](artist){"entity": "artist"} tour dates
+      - What is the next match of [Real Madrid](artist){"entity": "artist"}
+      - When will [AC Milan](artist){"entity": "artist"} play next
+      - Who is the opponent of [Inter Milan](artist){"entity": "artist"} next game
+      - Are there any [Barcellona](artist){"entity": "artist"} games in [city](city){"entity": "city"}
+      - How can I buy tickets for the next [Bayern Munich](artist){"entity": "artist"} game
+      - Can you show me the [Chicago Cubs](artist){"entity": "artist"} upcoming matches
+      - I would like to watch the match between [Juventus](artist){"entity": "artist"} and [AC Milan](artist){"entity": "artist"}
+      - What are the match details for [SS Lazio](artist){"entity": "artist"} vs [AS Roma](artist){"entity": "artist"}
+      - I am looking for the schedule of [Napoli](artist){"entity": "artist"} matches
+      - What is the date and time of the next match for [Los Angeles Lakers](artist){"entity": "artist"}
+      - Future matches of [Juventus](artist){"entity": "artist"}
+
+  - intent: search_country
+    examples: |
+      - What's the next event in [Italy](country){"entity": "country"}
+      - What events are scheduled in [France](country){"entity": "country"}
+      - What concerts are scheduled in [Germany](country){"entity": "country"}
+      - What shows are scheduled in [United Kingdom](country){"entity": "country"}
+      - What events are happening in [Spain](country){"entity": "country"}
+      - What's the next event taking place in [Brazil](country){"entity": "country"}
+      - What are the upcoming events in [China](country){"entity": "country"}
+      - What's happening in [Japan](country){"entity": "country"} tonight
+      - Are there any events happening in [India](country){"entity": "country"} this weekend
+      - What are the top events in [Russia](country){"entity": "country"}
+      - Can you recommend events in [United States](country){"entity": "country"}
+      - Are there any free events in [Canada](country){"entity": "country"}
+      - I want to find events in [Australia](country){"entity": "country"}
+      - What are the must-see events in [Mexico](country){"entity": "country"}
+      - Are there any family-friendly events in [Argentina](country){"entity": "country"}
+      - Next events in [Colombia](country){"entity": "country"}
+
+  - intent: search_city_artist
+    examples: |
+      - Tell me the upcoming [Coldplay](artist){"entity": "artist"} concerts in [Milan](city){"entity": "city"}
+      - Upcoming concerts of [Eminem](artist){"entity": "artist"} in [Rome](city){"entity": "city"}
+      - What events are scheduled for [Beyoncé](artist){"entity": "artist"} in [Los Angeles](city){"entity": "city"}
+      - Upcoming [Ed Sheeran](artist){"entity": "artist"} shows in [Sydney](city){"entity": "city"}
+      - Are there any [Taylor Swift](artist){"entity": "artist"} concerts in [Toronto](city){"entity": "city"}?
+      - I want to find events for [Adele](artist){"entity": "artist"} in [London](city){"entity": "city"}
+      - Upcoming [Drake](artist){"entity": "artist"} concerts in [New York](city){"entity": "city"}
+      - What are the next [Shakira](artist){"entity": "artist"} shows in [Barcelona](city){"entity": "city"}
+      - How can I get tickets for [J-Hope](artist){"entity": "artist"} concert in [Seoul](city){"entity": "city"}
+      - I am looking for events of [Lady Gaga](artist){"entity": "artist"} in [Las Vegas](city){"entity": "city"}
+
+  - intent: search_segment
+    examples: |
+      - Tell me the upcoming events in the [Sports](segment){"entity": "segment"} category
+      - What are the upcoming events in the [Music](segment){"entity": "segment"} category?
+      - Can you tell me about events in the [Art](segment){"entity": "segment"} category?
+      - I want to know about upcoming [Theatre](segment){"entity": "segment"} events
+      - Are there any [Arts & Theater](segment){"entity": "segment"} events happening in the city?
+      - I am interested in events in the [Miscellaneous](segment){"entity": "segment"} category
+      - What is the schedule of [Sports](segment){"entity": "segment"} events this weekend?
+      - Are there any [Music](segment){"entity": "segment"} festivals happening in the next month?
+      - Can you recommend any [Art](segment){"entity": "segment"} events happening in the city?
+      - What are the must-see [Theatre](segment){"entity": "segment"} events in the city?
+
+  - intent: search_segment_city
+    examples: |
+      - Tell me the upcoming events in the [Sports](segment){"entity": "segment"} category in [New York](city){"entity": "city"}
+      - What are the upcoming events in the [Music](segment){"entity": "segment"} category in [Los Angeles](city){"entity": "city"}?
+      - Can you tell me about events in the [Arts](segment){"entity": "segment"} category in [Paris](city){"entity": "city"}?
+      - I want to know about upcoming [Theatre](segment){"entity": "segment"} events in [Rome](city){"entity": "city"}
+      - Are there any [Arts & Theater](segment){"entity": "segment"} events happening in the [Berlin](city){"entity": "city"}?
+      - I am interested in events in the [Miscellaneous](segment){"entity": "segment"} category in [London](city){"entity": "city"}
+      - What is the schedule of [Sports](segment){"entity": "segment"} events this weekend in [Tokyo](city){"entity": "city"}?
+      - Are there any [Music](segment){"entity": "segment"} festivals happening in the next
+
+  - intent: search_segment_country
+    examples: |
+      - Can you give me the schedule of [Sports](segment){"entity": "segment"} events in [USA](country){"entity": "country"}
+      - Can you tell me about upcoming events in the [Music](segment){"entity": "segment"} category in [France](country){"entity": "country"}
+      - Are there any [Arts](segment){"entity": "segment"} events happening in [Italy](country){"entity": "country"}?
+      - I am interested in [Theatre](segment){"entity": "segment"} events happening in [Germany](country){"entity": "country"}
+      - Can you recommend any [Arts & Theater](segment){"entity": "segment"} events in [Spain](country){"entity": "country"}?
+      - Are there any events in the [Miscellaneous](segment){"entity": "segment"} category happening in [Japan](country){"entity": "country"}?
+      - What's on the schedule for [Sports](segment){"entity": "segment"} events in [Canada](country){"entity": "country"} this month?
+      - Can you give me information about upcoming [Music](segment){"entity": "segment"} festivals in [Australia](country){"entity": "country"}
+
+  - intent: search_date
+    examples: |
+      - Can you show me the events happening between [2023-05-01]{"entity": "date", "role":"start"} and [2023-05-31]{"entity": "date", "role":"end"}
+      - What are the events scheduled in [New York](city){"entity": "city"} from [2023-06-01]{"entity": "date", "role":"start"} to [2023-06-30]{"entity": "date", "role":"end"}
+      - Can you give me a list of events between [2023-07-15]{"entity": "date", "role":"start"} and [2023-07-31]{"entity": "date", "role":"end"}
+      - Are there any events happening in [Los Angeles](city){"entity": "city"} from [2023-08-01]{"entity": "date", "role":"start"} to [2023-08-31]{"entity": "date", "role":"end"}
+      - Can you tell me about the events in [Paris](city){"entity": "city"} between [2023-09-01]{"entity": "date", "role":"start"} and [2023-09-30]{"entity": "date", "role":"end"}
+      - Tell me the events happening on [2023-10-31]{"entity": "date", "role":"start"}
+      - What are the events in [Rome](city){"entity": "city"} ending on [2023-11-15]{"entity": "date", "role":"end"}
+      - Can you give me the list of events starting on [2023-12-01]{"entity": "date", "role":"start"} in [Barcelona](city){"entity": "city"}?
+      - Are there any events happening until [2024-01-31]{"entity": "date", "role":"end"} in [Amsterdam](city){"entity": "city"}?
+
+  ###INTENT DETAILS
+
+  - intent: get_event_details
+    examples: |
+      - What are the details of the event with id: [G5v0Z98m2psoc](event_id){"emtity": "event_id"}
+      - Can you give me more information about the event [ZK98xZKrZAddvZup5QQKr](event_id){"emtity": "event_id"}
+      - Can you tell me more about the event with id [rZ7SnyZ1Ad3K_w](event_id){"entity": "event_id"}
+      - Can you provide me with the details of event [vvG1jZ9KbsbPCD](event_id){"entity": "event_id"}
+      - I need more information about the event with id [rZ7SnyZ1Ad3aQ8](event_id){"entity": "event_id"}
+      - Can you give me the schedule and location of event [ZK98xZKrZkeF1Zup5QQKr](event_id){"entity": "event_id"}
+      - Can you tell me the ticket information for event [ZK98xZKrZdv6FZup5QQKrs](event_id){"entity": "event_id"}
