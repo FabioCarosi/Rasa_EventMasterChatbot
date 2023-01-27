@@ -41,8 +41,11 @@ The chatbot allows you to search for events in different ways. You can search fo
 - **Date**: To search for events by date, you can ask the chatbot "What are the events scheduled in [New York] from [2023-06-01] to [2023-06-30]?". **PLEASE NOTE:** The date must be in the format **`YYYY-MM-DD`**.
 
 It's also possible to combine the queries, for example: "What events are happening with [artist/team name] in [city name]?"
-
 Please note that the categories allowed are ("arts", "theatre", "music", "sports", "miscellaneous") and date must be in the format YYYY-MM-DD
+
+You can also ask for more specific information about an event:
+
+-**Event Info**: To get more information from an event from its event id. Example: "Can you give me more information about the event [ZK98xZKrZAddvZup5QQKr]"
 
 ### Screenshots
 
