@@ -45,7 +45,7 @@ Please note that the categories allowed are ("arts", "theatre", "music", "sports
 
 You can also ask for more specific information about an event:
 
--**Event Info**: To get more information from an event from its event id. Example: "Can you give me more information about the event [ZK98xZKrZAddvZup5QQKr]"
+- **Event Info**: To get more information from an event from its event id. Example: "Can you give me more information about the event [ZK98xZKrZAddvZup5QQKr]"
 
 ### Screenshots
 
