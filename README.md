@@ -58,9 +58,9 @@ Searching events for a sports team
 
 Searching events for a category
 
-![Searching for events for a category](images/screenshot/category.png)
+![Searching for events for a category](images/screenshot/segment.png)
 
-Searching events for a category
+Searching events by date
 
 ![Searching for events by date](images/screenshot/date.png)
 
@@ -70,7 +70,7 @@ Get information about an event
 
 Searching events for an artist in a country
 
-![Searching events for an artist in a country](images/screenshot/artist_county.png)
+![Searching events for an artist in a country](images/screenshot/artist_country.png)
 
 Help request
 
