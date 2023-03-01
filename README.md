@@ -83,6 +83,14 @@ Search without results
 
 ![Search without results](images/screenshot/no_events.png)
 
+Favorite city dialog
+
+![Favorite city dialog](images/screenshot/favorite_city.png)
+
+Bye bye
+
+![Bye bye](images/screenshot/bye.png)
+
 ## **Built With**
 
 - **[Rasa](https://rasa.com/)** - The open-source conversational AI framework used
