@@ -113,6 +113,21 @@ nlu:
       - I need help
       - what are you for?
 
+  - intent: start
+    examples: |
+      - start
+      - open
+      - begin
+      - init
+      - /start
+
+  - intent: stop
+    examples: |
+      - quit
+      - close
+      - stop
+      - /stop
+
   ### SEARCH INTENTS ###
   - intent: search_city
     examples: |
@@ -211,6 +226,20 @@ nlu:
       - Can you recommend any [Art](segment){"entity": "segment"} events happening in the city?
       - What are the must-see [Theatre](segment){"entity": "segment"} events in the city?
 
+  - intent: favorite_city
+    examples: |
+      - [Ancona](favorite_city){"entity": "favorite_city"}
+      - [Milano](favorite_city){"entity": "favorite_city"}
+      - [New York](favorite_city){"entity": "favorite_city"}
+      - My favorite city is [Torino](favorite_city){"entity": "favorite_city"}
+      - I really love [Florence](favorite_city){"entity": "favorite_city"}
+      - I have a soft spot for [Amsterdam](favorite_city){"entity": "favorite_city"}
+      - [Paris](favorite_city){"entity": "favorite_city"} is where I feel most alive
+      - Whenever I get the chance, I travel to [Tokyo](favorite_city){"entity": "favorite_city"}
+      - [Berlin](favorite_city){"entity": "favorite_city"} is the city where I've had some of my best memories
+      - [Dubai](favorite_city){"entity": "favorite_city"} is the ultimate city for luxury and indulgence, I just can't resist it!
+      - For me [San Benedetto del Tronto](favorite_city){"entity": "favorite_city"} is the best city in the world
+
   - intent: search_segment_city
     examples: |
       - Tell me the upcoming events in the [Sports](segment){"entity": "segment"} category in [New York](city){"entity": "city"}
@@ -256,3 +285,19 @@ nlu:
       - I need more information about the event with id [rZ7SnyZ1Ad3aQ8](event_id){"entity": "event_id"}
       - Can you give me the schedule and location of event [ZK98xZKrZkeF1Zup5QQKr](event_id){"entity": "event_id"}
       - Can you tell me the ticket information for event [ZK98xZKrZdv6FZup5QQKrs](event_id){"entity": "event_id"}
+
+  - intent: ask_me_anything
+    examples: |
+      - ask me something
+      - do you know which city I like the most?
+      - do you want to know something about me?
+      - Ask me something I like
+
+  - intent: repeat_favorite_city
+    examples: |
+      - tell me what you know about my favorite city
+      - give me some information about my city
+      - What does it say in Wikipedia for my city?
+      - what do you know about my preferences
+      - tell me everything you know about my favorite city
+      - repeat the information you have about my favorite city

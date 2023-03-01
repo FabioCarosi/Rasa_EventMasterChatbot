@@ -1,11 +1,12 @@
 from typing import Any, Text, Dict, List
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
+from rasa_sdk.events import SlotSet
 
 import requests
+import wikipediaapi
 
-
-api_key = "<API-KEY-TicketMaster>"
+api_key = "API_TICKETMASTER"
 
 
 class EventSearch(Action):
@@ -79,6 +80,64 @@ class GetEventDetails(Action):
             count = count + 1
             if count == max:
                 break
+        return []
+
+
+class ActionSetFavoriteCity(Action):
+    def name(self) -> Text:
+        return "action_set_favorite_city"
+
+    def run(
+        self,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: Dict[Text, Any],
+    ) -> List[Dict[Text, Any]]:
+
+        entities = tracker.latest_message["entities"]
+        for entity in entities:
+            if (entity["entity"] == "favorite_city") | (entity["entity"] == "city"):
+                city_value = entity["value"]
+
+        if city_value:
+            dispatcher.utter_message(
+                text="I will definitely remember your favorite city"
+            )
+            return [SlotSet("favorite_city", city_value)]
+        else:
+            dispatcher.utter_message(text="sorry, i can't remember that :(")
+            return []
+
+
+class ActionSayFavoriteCity(Action):
+    def name(self) -> Text:
+        return "action_say_favorite_city"
+
+    def run(
+        self,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: Dict[Text, Any],
+    ) -> List[Dict[Text, Any]]:
+
+        favorite_city = tracker.get_slot("favorite_city")
+
+        wiki_wiki = wikipediaapi.Wikipedia(
+            language="en", extract_format=wikipediaapi.ExtractFormat.WIKI
+        )
+
+        p_wiki = wiki_wiki.page(favorite_city)
+
+        print(p_wiki.text)
+
+        if not favorite_city:
+            dispatcher.utter_message(text="I don't know your favorite city :(")
+        else:
+            dispatcher.utter_message(
+                text=f"Sure! here is some information for your favorite city:{favorite_city}!"
+            )
+            dispatcher.utter_message(p_wiki.text)
+
         return []
 
 

@@ -17,6 +17,11 @@ intents:
   - search_segment_city
   - search_segment_country
   - get_event_details
+  - ask_me_anything
+  - repeat_favorite_city
+  - favorite_city
+  - start
+  - stop
 
 entities:
   - city
@@ -25,6 +30,22 @@ entities:
   - country
   - segment
   - event_id
+  - favorite_city
+
+slots:
+  favorite_city:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: favorite_city
+        conditions:
+          - active_loop: favorite_city_form
+
+forms:
+  favorite_city_form:
+    required_slots:
+      - favorite_city
 
 regex_features:
   - name: event_id
@@ -33,8 +54,32 @@ regex_features:
 actions:
   - action_search
   - action_detail
+  - action_say_favorite_city
+  - action_set_favorite_city
 
 responses:
+  utter_start:
+    - text: "Hi there! I'm EventMaster, your personal assistant for TicketMaster tickets. How can I assist you today?"
+    - text: "Good morning! I'm here to help you find the best events available on TicketMaster. What can I do for you?"
+    - text: "Hello! I'm EventMaster, the chatbot that helps you find tickets to the best shows, concerts, and sports events. What do you need?"
+    - text: "Hi! I'm your virtual assistant for TicketMaster tickets. I'm here to help you find your next favorite event. How can I be of service?"
+
+  utter_stop:
+    - text: "Thanks for using EventMaster! It was a pleasure assisting you. Have a great day!"
+    - text: "I hope I was able to help you find the perfect event. Thank you for using EventMaster. Goodbye!"
+    - text: "Thanks for chatting with EventMaster. If you have any further questions or need assistance, don't hesitate to contact us. Have a great day!"
+    - text: "It was great chatting with you! Thank you for using EventMaster. Have a fantastic day and we hope to see you soon."
+    - text: "Thank you for using EventMaster. We appreciate your business and hope to assist you again in the future. Goodbye for now!"
+
+  utter_goodbye:
+    - text: "Bye"
+    - text: "Hello!"
+    - text: "Take care!"
+    - text: "Catch you later!"
+    - text: "See you soon!"
+    - text: "Have a good one!"
+    - text: "Later!"
+
   utter_greet:
     - text: "Hey! How can I help you?"
 
@@ -48,12 +93,14 @@ responses:
   utter_happy:
     - text: "Great, carry on!"
 
-  utter_goodbye:
-    - text: "Bye"
-
   utter_iamabot:
     - text: "I am a bot, powered by Rasa and I was created for a university project. \n You can search for events sold on the TicketMaster platform. You can search by filtering by category (Sports, Arts, Theatre, Music, and Miscellanous), by city, by country, and by date. You can also request more information about a specific event by entering its id code. "
 
+  utter_ask_favorite_city:
+    - text: What is your favorite city?
+
+  utter_remember:
+    - text: Thanks. I'll remember that.
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
