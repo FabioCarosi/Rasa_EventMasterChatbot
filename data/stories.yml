@@ -77,3 +77,18 @@ stories:
       - action: action_search
       - intent: get_event_details
       - action: action_detail
+
+  - story: get suggest
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: ask_me_anything
+      - action: utter_ask_favorite_city
+      - intent: favorite_city
+        entities:
+          - favorite_city: Ancona
+      - slot_was_set:
+          - favorite_city: Ancona
+      - action: action_set_favorite_city
+      - intent: repeat_favorite_city
+      - action: action_say_favorite_city

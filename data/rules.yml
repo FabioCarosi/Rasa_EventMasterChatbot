@@ -1,13 +1,43 @@
 version: "3.1"
 
 rules:
+  - rule: Say goodbye anytime the user says goodbye
+    steps:
+      - intent: goodbye
+      - action: utter_goodbye
 
-- rule: Say goodbye anytime the user says goodbye
-  steps:
-  - intent: goodbye
-  - action: utter_goodbye
+  - rule: Start response
+    steps:
+      - intent: start
+      - action: utter_start
 
-- rule: Say 'I am a bot' anytime the user challenges
-  steps:
-  - intent: bot_challenge
-  - action: utter_iamabot
+  - rule: Stop response
+    steps:
+      - intent: stop
+      - action: utter_stop
+
+  - rule: Say 'I am a bot' anytime the user challenges
+    steps:
+      - intent: bot_challenge
+      - action: utter_iamabot
+
+  - rule: Repeat favorite city
+    steps:
+      - intent: repeat_favorite_city
+      - action: action_say_favorite_city
+
+  - rule: Activate form
+    steps:
+    - intent: ask_me_anything
+    - action: favorite_city_form
+    - active_loop: favorite_city_form
+
+  - rule: Submit form
+    condition:
+    - active_loop: favorite_city_form
+    steps:
+      - action: favorite_city_form
+      - active_loop: null
+      - slot_was_set:
+        - requested_slot: null
+      - action: action_set_favorite_city
